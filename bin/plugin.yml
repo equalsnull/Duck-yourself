@@ -1,0 +1,7 @@
+main: equalsnull.Difficulty2020.Main
+name: Difficult2020
+version: 1.0
+author: equalsnull
+description: An new Difficulty
+api-version: 1.15
+commands:

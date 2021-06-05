@@ -93,7 +93,7 @@ public class EntityListener implements Listener{
 			entity.getEquipment().setBoots(boots);
 			entity.getEquipment().setBootsDropChance(0);
 			//Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, new Skelly((ProjectileSource) e), 0L, 10L); //0 Tick initial delay, 20 Tick (1 Second) between repeats
-			//new Shooter((ProjectileSource) e).runTaskTimer(plugin, 0, 10);
+			//new Shooter((ProjectileSource) e).runTaskTimer(plugin, 0, 10); 
 		}
 		if(e instanceof Creeper) {
 			Creeper c = (Creeper)e;

@@ -1,2 +1,3 @@
-# Difficultybad
+# Duck yourself
+
 A Minecraft Plugin

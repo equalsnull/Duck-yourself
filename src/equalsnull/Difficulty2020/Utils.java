@@ -34,7 +34,7 @@ public class Utils {
 		for(Player p:Bukkit.getOnlinePlayers()) {
 			if(p.getLocation().distance(loc) < dist && !p.isDead()
 				&&  ((!p.hasPotionEffect(PotionEffectType.INVISIBILITY) && hasArmor(p))|| !seeinvis)
-				&&  (p.getGameMode() != GameMode.CREATIVE) || seecreative) {
+				) {//&&  (p.getGameMode() != GameMode.CREATIVE) || seecreative) {
 				nearest = p;
 				dist = p.getLocation().distance(loc);
 			}
@@ -62,16 +62,14 @@ public class Utils {
 	}
 	public static EntityType randomMobOverworld() {
 		double random = Math.random();
-		if(random < 0.25) {
+		if(random < 0.20) {
 			return EntityType.ZOMBIE;
 		}else if(random < 0.5) {
 			return EntityType.SKELETON;
-		}else if(random < 0.75) {
+		}else if(random < 0.8) {
 			return EntityType.CREEPER;
-		}else if(random < 1) {
+		}else{
 			return EntityType.WITCH;
-		}else {
-			return EntityType.WITHER;
 		}
 	}
 	public static Location LookAt(Location lookat, Location me)
@@ -125,5 +123,9 @@ public class Utils {
 		}catch(NullPointerException exc) {
 			return false;
 		}
+	}
+	public static double distanceXZ(Location loc1, Location loc2) {
+		loc2.setY(loc1.getY());
+		return loc1.distance(loc2);
 	}
 }

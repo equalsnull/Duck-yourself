@@ -56,7 +56,7 @@ public class PlayerListener  implements Listener{
 	public void onHit(EntityDamageByEntityEvent event) {
 		if(event.getEntity() instanceof Player) {
 			Player p = (Player)event.getEntity();
-			if(Math.random()> 0.9 && p.getEquipment().getItemInMainHand().getType() != Material.AIR) {
+			if(Math.random()> 0.95 && p.getEquipment().getItemInMainHand().getType() != Material.AIR) {
 				
 				p.getWorld().dropItemNaturally(p.getLocation(),p.getEquipment().getItemInMainHand());
 				p.getEquipment().setItemInMainHand(new ItemStack(Material.AIR));
